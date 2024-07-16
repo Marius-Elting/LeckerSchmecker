@@ -1,0 +1,32 @@
+networks:
+
+  t3lls_gate--app_net:
+    external: true
+
+services:
+
+  njs-ls:
+    build:
+      context: ./njs-ls/next-app
+      dockerfile: prod.Dockerfile
+    restart: always
+    networks: # internal port 3000
+      - t3lls_gate--app_net
+    env_file:
+      - ./njs-ls/.env
+    stop_grace_period: 0s
+
+  njs-ls-dev:
+    container_name: leckerschmecker-njs-ls-dev
+    build:
+      context: ./njs-ls/next-app
+      dockerfile: dev.Dockerfile
+    restart: always
+    networks: # internal port 3000
+      - t3lls_gate--app_net
+    volumes:
+      - ./njs-ls/next-app/src:/app/src
+      - ./njs-ls/next-app/public:/app/public
+    env_file:
+      - ./njs-ls/.env
+    stop_grace_period: 0s
