@@ -6,4 +6,15 @@
 body{
     margin: 0;
     padding: 0;
+
+}
+
+img[alt="Info icon"]{
+    display: none;
+}
+
+button{
+    &:hover{
+        cursor: pointer;
+    }
 }

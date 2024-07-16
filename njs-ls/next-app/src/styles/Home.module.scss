@@ -1,0 +1,52 @@
+.component {
+    padding-bottom: 48px;
+}
+
+
+.history_wrapper{
+    padding-bottom: 70px;
+}
+.container {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+    h1 {
+        font-size: 24px;
+        color: #333;
+    }
+
+    p {
+        font-size: 16px;
+        color: #555;
+    }
+
+    .nutrimentsTable {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    .nutrimentsTable th,
+    .nutrimentsTable td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .nutrimentsTable th {
+        background-color: #f2f2f2;
+        color: #333;
+    }
+
+    .nutrimentsTable td {
+        background-color: #fff;
+        color: #555;
+    }
+
+}

@@ -11,7 +11,7 @@ function NavBar() {
             <ul>
                 <Link className={pathname == "/history" ? styles.active : ""} href={"/history"}>History</Link>
                 <Link className={pathname == "/" ? styles.active : ""} href={"/"}>Home</Link>
-                <Link className={pathname == "/rec" ? styles.active : ""} href={"/rec"}>Rec</Link>
+                <Link href={pathname}></Link>
             </ul>
         </nav> 
     );

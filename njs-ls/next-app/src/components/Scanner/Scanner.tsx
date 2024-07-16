@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Html5QrcodeScanner } from 'html5-qrcode';
 
-const Scanner = ({setScanResult}) => {
+const Scanner = ({setScanResult, reloadScanner}) => {
   const [result, setResult] = useState("");
   useEffect(() => {
     const scanner = new Html5QrcodeScanner('reader', {
@@ -23,13 +23,11 @@ const Scanner = ({setScanResult}) => {
       console.log(err);
     };
     scanner.render(success, error);
-  }, []);
+  }, [reloadScanner]);
 
   return (
     <div>
       <div id="reader"></div>
-      <p>{result}</p>
-      <p>{"result"}</p>
     </div>
   );
 };
