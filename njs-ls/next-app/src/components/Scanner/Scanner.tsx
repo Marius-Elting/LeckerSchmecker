@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Html5QrcodeScanner } from 'html5-qrcode';
-
+import styles from "./Scanner.module.scss"
 const Scanner = ({setScanResult, reloadScanner}) => {
   const [result, setResult] = useState("");
   useEffect(() => {
@@ -27,7 +27,7 @@ const Scanner = ({setScanResult, reloadScanner}) => {
 
   return (
     <div>
-      <div id="reader"></div>
+      <div className={styles.reader} id="reader"></div>
     </div>
   );
 };
